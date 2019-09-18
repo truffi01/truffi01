@@ -19,13 +19,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-style: oblique;
+    color: white; 
 }
 
 .TeamOne {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: red;
+    color: yellow;
     
 }
 
@@ -33,14 +34,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: red;
+    color: yellow;
 }
 
 .Timer {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     font-weight: 450;
-    color: black;
+    color: whitesmoke;
     text-align: center;
     
 }
@@ -48,18 +49,63 @@
 .scoreone {
     font-size: 45px;
     font-weight: 800;
-    color: red;
+    color: whitesmoke;
     text-align: center;
 }
 
 .scoretwo {
     font-size: 45px;
     font-weight: 800;
-    color: red;
+    color: whitesmoke;
     text-align: center;
 }
 
 a {
     display: block;
     height: 100%;
+}
+
+body {
+    background: rgb(2,0,36);
+    background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 14%, transparent), url(MervGriffin.jpg);
+    height: 100%;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.modal {
+    display:block; 
+    position: fixed;
+    text-align: center;
+    height: auto;
+    width: auto;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+}
+
+.logoM {
+    background: url(Seinfeld_English_logo.png);
+    width: 160px;
+    height: 64px;
+    background-size: 100%;
+    display: inline-block;
+    align-self: center;
+    top: 10px;
+    margin-top: 3%; 
+}
+
+.buttonplay {
+    color:whitesmoke;
+    background-color: brown;
+    display: inline-block;
+    align-self: center;
+    margin-bottom: 3%;
+    
+}
+
+p {
+    padding-left: 2%;
+    padding-right: 2%; 
 }

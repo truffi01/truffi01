@@ -56,8 +56,11 @@ function timer () {
             
         }
     }, 1000);
-
 }
+
+//create function for playGame. window onload modal? sync timer with play game function. difficult with background image 
+
+
 
 
 
