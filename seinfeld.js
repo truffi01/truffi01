@@ -1,6 +1,31 @@
 //declaring global variable for the sum of the scores of the game and making two different variables 
 let sumTeamOne = 0
 let sumTeamTwo = 0
+// let theobj = require('./data.js');
+
+let arrayOfAnswer = 0
+
+//function for playing with music from stack overflow 
+//var audio = new Audio('music.mp3');
+//function playMus(){ audio.play();}
+//audio.play();
+
+let music = new Audio('music.mp3'); 
+music.play();
+
+function getData(){
+    fetch('https://seinfeld-quotes.herokuapp.com/quotes')
+        .then(res => {
+            return res.json()
+        }) 
+        .then(res => {
+            console.log(res.quotes)
+            arrayOfAnswer = res.quotes;
+            console.log(arrayOfAnswer);
+        })
+}
+getData();
+
 
 
 //made two different functions for the clicable <a> tags and set to a block and 100% height so you can click on the whole area
@@ -10,6 +35,13 @@ function incrementTeamOneScore (){
     let clickedScoreTeamOne = document.querySelector(".scoreone");
     sumTeamOne++;
     clickedScoreTeamOne.innerHTML = sumTeamOne;
+
+    if (sumTeamOne === 20){
+        let modalD = document.querySelector(".modal");
+        let modalContentWon = document.querySelector(".youwin");
+        modalD.style.display = "block";
+        modalContentWon.innerHTML = "Improv Team Wins!!!!!!"
+    }
 }
 
 function incrementTeamTwoScore (){
@@ -18,6 +50,13 @@ function incrementTeamTwoScore (){
     let clickedScoreTeamTwo = document.querySelector(".scoretwo");
     sumTeamTwo++;
     clickedScoreTeamTwo.innerHTML = sumTeamTwo;
+
+    if (sumTeamTwo === 20){
+        let modalD = document.querySelector(".modal");
+        let modalContentWon = document.querySelector(".youwin");
+        modalD.style.display = "block";
+        modalContentWon.innerHTML = "Bizzaro World Team Wins!!!!!!"
+    }
 }
 /*
 $.ajax({
@@ -31,14 +70,16 @@ $.ajax({
 });*/
 
 //generating a random number to put into the array of quotes to display a new quote
+let element = 0
 
 function randomizer (array){
     
-    let randomnumber = Math.floor(Math.random() * array.length)
-
     let quoteMiddle = document.querySelector(".quote")
-    let element = array[randomnumber]
+    element = array[Math.floor(Math.random() * (421))]
+    console.log(element); 
     quoteMiddle.innerHTML = element.quote
+    timer();
+    
 
 }
 
@@ -48,22 +89,40 @@ function timer () {
     let seconds = 5
     document.querySelector(".timernumber").innerHTML = seconds 
 
-    let t = setInterval(function(){
+    let t = setInterval(() => {
         seconds--;
         document.querySelector(".timernumber").innerHTML = seconds  
         if(seconds == 0){
+            quoteMiddle = document.querySelector(".quote")
+            console.log(element); 
+            quoteMiddle.innerHTML = element.author
             clearInterval(t);
             
+            
+            //wondered if you can access the elemnt of the array here if you put timer into the randomizer function 
         }
     }, 1000);
 }
 
-//create function for playGame. window onload modal? sync timer with play game function. difficult with background image 
+
+//create function for playGame. 
+//window onload modal? sync timer with play game function. 
+//difficult with background image. function that displays an answer call the new question. 
+//event listener waiting for 20 score if statment 
+
+//play game calls timer and question 
 
 
 
+function disappearModule(){
+    let modalD = document.querySelector(".modal");
+    modalD.style.display = "none";
+    playGame();
+}
 
-
+ function playGame (){
+            randomizer(arrayOfAnswer);
+}
 
 
 

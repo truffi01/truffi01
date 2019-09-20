@@ -1,4 +1,4 @@
-{
+module.exports = {
     "quotes": [
     {
     "quote": "You look like you live with your mother!",

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 1fr 2fr 1 fr;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-auto-rows: minmax(200px,auto);
+    grid-auto-rows: minmax(259px,auto);
     justify-items: center;
     align-items: center
 }
@@ -12,12 +12,12 @@
     width: 250px;
     height: 100px;
     background-size: 100%;
-    //why did this background size make the image appear?
+    /* why did this background size make the image appear? */
 }
 
 .quote {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 35px;
+    font-size: 30px;
     font-style: oblique;
     color: white; 
 }
@@ -39,7 +39,7 @@
 
 .Timer {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 450;
     color: whitesmoke;
     text-align: center;
@@ -68,7 +68,7 @@ a {
 body {
     background: rgb(2,0,36);
     background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 14%, transparent), url(MervGriffin.jpg);
-    height: 100%;
+    height: auto;
     background-size: cover; 
     background-repeat: no-repeat;
 }

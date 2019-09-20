@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
+    
 </head>
-<body>
+<body >
+    
     <div class="modal">
         <div class="logoM"></div>
         <div class="modalcontent">
-            <p>Welcome to Seinfeld Trivia! The goal of this game is to see which team has the greatest Seinfeld character knowledge! The game is simple, each Team has an opportunity to answer every question. Each question will be a quote of a character from Seinfeld. If the team answers correct, they will recieve one point. Each team that answers a question correct, simply clicks on their score and they will recieve one point. First team to answer twenty correct wins!</p>
-            <button onclick="" class="buttonplay">Play Game</button>
+            <p class="youwin">Welcome to Seinfeld Trivia! The goal of this game is to see which team has the greatest Seinfeld character knowledge! The game is simple, each Team has an opportunity to answer every question. Each question will be a quote of a character from Seinfeld. If the team answers correct, they will recieve one point. Each team that answers a question correct, simply clicks on their score and they will recieve one point. After each answer, simply click on the answer and you will recieve another question. First team to answer twenty correct wins!</p>
+            <button onclick="disappearModule()" class="buttonplay">Play Game</button>
             
         </div>
     </div>
@@ -21,7 +23,7 @@
         <div class="logo"></div>
         <div></div>
         <div></div>
-        <div class="quote">"How can you turn down a junior mint, its chocolaty, it minty, it's refreshing!"</div>
+        <div class="quote" onclick="playGame()">"How can you turn down a junior mint, its chocolaty, it minty, it's refreshing!"</div>
         <div></div>
         <div class="TeamOne"><a onclick="incrementTeamOneScore()"> Improve Team Score
             <div class="scoreone">0</div></a></div>
